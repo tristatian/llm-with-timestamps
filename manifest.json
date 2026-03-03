@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Claude.ai Message Timestamps",
+  "description": "Automatically adds local timestamps to user and assistant messages on Claude.ai.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://claude.ai/*",
+        "https://*.claude.ai/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
